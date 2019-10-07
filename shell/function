@@ -1,0 +1,13 @@
+#!/bin/bash
+
+function find_pid() {
+    local action="ps -ef | grep '$1' | grep -v grep | awk '{print \$2}'"
+    eval $action
+}
+
+function kill_pid() {
+    for pid in $*
+    do
+        kill -9 $pid
+    done
+}
