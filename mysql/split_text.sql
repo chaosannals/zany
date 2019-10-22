@@ -1,4 +1,4 @@
-CREATE DEFINER=`toys`@`%` PROCEDURE `split_text`(
+CREATE DEFINER=`root`@`%` PROCEDURE `split_text`(
 	IN raw LONGTEXT,
     IN sep VARCHAR(10)
 )

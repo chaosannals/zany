@@ -11,3 +11,8 @@ function kill_pid() {
         kill -9 $pid
     done
 }
+
+function user_cmd() {
+    local action="runuser $1 -s /bin/bash -c '$2'"
+    eval $action
+}
