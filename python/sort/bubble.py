@@ -51,7 +51,7 @@ def bubble_sort(raw):
             break
     return raw
 
-def cocktail_sort(raw):
+def cocktail_sort_1(raw):
     '''
     鸡尾酒排序：合并两次遍历为一次正反两向遍历的冒泡排序
     '''
@@ -79,9 +79,46 @@ def cocktail_sort(raw):
             break
     return raw
 
+def cocktail_sort(raw):
+    '''
+    带左右有序边界的鸡尾酒排序
+    '''
+    count = len(raw)
+    leftIndex = 0
+    leftBorder = 0
+    rightIndex = 0
+    rightBorder = count - 1
+    for _ in range(0, math.ceil(count / 2)):
+        # 正向排序
+        final = True
+        for j in range(leftBorder, rightBorder):
+            if raw[j] > raw[j + 1]:
+                tmp = raw[j]
+                raw[j] = raw[j + 1]
+                raw[j + 1] = tmp
+                final = False
+                rightIndex = j
+        rightBorder = rightIndex
+        if final:
+            break
+        # 反向排序
+        final = True
+        for j in range(rightBorder, leftBorder, -1):
+            if raw[j] < raw[j - 1]:
+                tmp = raw[j]
+                raw[j] = raw[j - 1]
+                raw[j - 1] = tmp
+                final = False
+                leftIndex = j
+        leftBorder = leftIndex
+        if final:
+            break
+    return raw
+
 raw = [3,2,1,5,8,6,3,9,7,8,9,10,11,12]
 print(raw)
 print(bubble_sort_2(raw))
 print(bubble_sort_1(raw))
 print(bubble_sort(raw))
+print(cocktail_sort_1(raw))
 print(cocktail_sort(raw))
