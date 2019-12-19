@@ -3,45 +3,49 @@
 '''
 import math
 
-def insert_sort(raw):
+def insert_sort(source):
     '''
     插入排序
     平均时间复杂度：O(n^2)
     '''
-    count = len(raw)
+    target = source[:]
+    count = len(target)
     for i in range(1, count):
-        tmp = raw[i]
+        tmp = target[i]
         index = i # 需要被重写入的位置索引
         for j in range(i - 1, -1, -1):
-            if tmp >= raw[j]:
+            if tmp >= target[j]:
                 break
-            raw[j + 1] = raw[j]
+            target[j + 1] = target[j]
             index = j # 往前排
-        raw[index] = tmp
-    return raw
+        target[index] = tmp
+    return target
 
-def shell_sort_1(raw):
+def shell_sort(source):
     '''
     希尔排序
+    【不稳定排序】
     平均时间复杂度：O(nlogn)
+    最坏时间复杂度：O(n^2)
     '''
-    count = len(raw)
+    target = source[:]
+    count = len(target)
     d = count
     while d > 1:
         d = math.ceil(d / 2)
         for i in range(0, d): # 遍历步进增量为d的每一组
             for j in range(i + d, count, d): # 步进位 d 的插入排序
-                tmp = raw[j]
+                tmp = target[j]
                 index = j
-                for k in range(index, -1, -d):
-                    if tmp >= raw[k]:
+                for k in range(j - d, -1, -d):
+                    if tmp >= target[k]:
                         break
-                    raw[k + d] = raw[k]
+                    target[k + d] = target[k]
                     index = k
-                raw[index] = tmp
-    return raw
+                target[index] = tmp
+    return target
 
-raw = [3,2,1,5,8,6,3,9,7,8,9,10,11,12,3,17,13,15]
-print(raw)
-print(insert_sort(raw))
-print(shell_sort_1(raw))
+source = [3,2,1,5,8,6,3,9,7,8,9,10,11,12,3,17,13,15]
+print(source)
+print(insert_sort(source))
+print(shell_sort(source))
