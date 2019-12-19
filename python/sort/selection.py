@@ -13,6 +13,6 @@ def selection_sort(raw):
         raw[minIndex] = tmp
     return raw
 
-raw = [3,2,1,5,8,6,3,9,7,8,9,10,11,12]
+raw = [3,2,1,5,8,6,3,9,7,8,9,10,11,12,3]
 print(raw)
 print(selection_sort(raw))
