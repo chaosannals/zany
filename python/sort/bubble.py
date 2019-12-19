@@ -1,3 +1,8 @@
+'''
+冒泡排序，鸡尾酒排序
+平均时间复杂度：O(n^2)
+'''
+
 import math
 
 def bubble_sort_2(raw):

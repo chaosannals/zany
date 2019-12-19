@@ -1,6 +1,7 @@
 def selection_sort(raw):
     '''
     选中最小置于前的选择排序
+    平均时间复杂度：O(n^2)
     '''
     count = len(raw)
     for i in range(0, count - 1):

@@ -1,6 +1,7 @@
 def insert_sort(raw):
     '''
     插入排序
+    平均时间复杂度：O(n^2)
     '''
     count = len(raw)
     for i in range(1, count):
