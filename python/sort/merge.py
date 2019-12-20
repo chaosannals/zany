@@ -7,7 +7,7 @@ def merge_sort_merge(target, start, middle, end):
     left = start
     right = middle + 1
     index = 0
-    # 
+    # 把左右排序写入缓存
     while left <= middle and right <= end:
         if target[left] <= target[right]:
             buffer[index] = target[left]
@@ -17,10 +17,12 @@ def merge_sort_merge(target, start, middle, end):
             buffer[index] = target[right]
             index += 1
             right += 1
+    # 把左边剩余的写入
     while left <= middle:
         buffer[index] = target[left]
         index += 1
         left += 1
+    # 把右边剩余的写入
     while right <= end:
         buffer[index] = target[right]
         index += 1
@@ -33,13 +35,14 @@ def merge_sort_reduce(target, start, end):
     '''
     if start < end:
         middle = math.floor((start + end) / 2)
-        # print("{} - {} - {}".format(start, middle, end))
         merge_sort_reduce(target, start, middle)
         merge_sort_reduce(target, middle + 1, end)
         merge_sort_merge(target, start, middle, end)
 
 def merge_sort(source):
     '''
+    归并排序
+    平均时间复杂度：O(nlogn)
     '''
     target = source[:]
     merge_sort_reduce(target, 0, len(target) - 1)
