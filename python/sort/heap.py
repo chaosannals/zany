@@ -1,5 +1,6 @@
 import math
 
+
 def heap_sort_down(target, parentIndex, length):
     '''
     堆下降调整
@@ -15,6 +16,7 @@ def heap_sort_down(target, parentIndex, length):
         parentIndex = childIndex
         childIndex = 2 * parentIndex + 1
     target[parentIndex] = tmp
+
 
 def heap_sort(source):
     '''
@@ -34,6 +36,7 @@ def heap_sort(source):
         heap_sort_down(target, 0, i)
     return target
 
-source = [3,2,1,5,8,6,3,9,7,8,9,10,11,12,3,17,13,15]
+
+source = [3, 2, 1, 5, 8, 6, 3, 9, 7, 8, 9, 10, 11, 12, 3, 17, 13, 15]
 print(source)
 print(heap_sort(source))

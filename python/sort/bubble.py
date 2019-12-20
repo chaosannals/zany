@@ -3,6 +3,7 @@
 '''
 import math
 
+
 def bubble_sort_2(source):
     '''
     双循环结构冒泡排序
@@ -11,12 +12,13 @@ def bubble_sort_2(source):
     target = source[:]
     count = len(target)
     for i in range(0, count):
-        for j in range(0, count - i -1):
+        for j in range(0, count - i - 1):
             if target[j] > target[j + 1]:
                 tmp = target[j]
                 target[j] = target[j+1]
                 target[j+1] = tmp
     return target
+
 
 def bubble_sort_1(source):
     '''
@@ -36,6 +38,7 @@ def bubble_sort_1(source):
         if final:
             break
     return target
+
 
 def bubble_sort(source):
     '''
@@ -59,6 +62,7 @@ def bubble_sort(source):
         if final:
             break
     return target
+
 
 def cocktail_sort_1(source):
     '''
@@ -89,6 +93,7 @@ def cocktail_sort_1(source):
         if final:
             break
     return target
+
 
 def cocktail_sort(source):
     '''
@@ -128,7 +133,8 @@ def cocktail_sort(source):
             break
     return target
 
-source = [3,2,1,5,8,6,3,9,7,8,9,10,11,12,3]
+
+source = [3, 2, 1, 5, 8, 6, 3, 9, 7, 8, 9, 10, 11, 12, 3]
 print(source)
 print(bubble_sort_2(source))
 print(bubble_sort_1(source))

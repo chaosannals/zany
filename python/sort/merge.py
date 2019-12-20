@@ -1,5 +1,6 @@
 import math
 
+
 def merge_sort_merge(target, start, middle, end):
     '''
     '''
@@ -30,6 +31,7 @@ def merge_sort_merge(target, start, middle, end):
     for i in range(0, len(buffer)):
         target[start + i] = buffer[i]
 
+
 def merge_sort_reduce(target, start, end):
     '''
     '''
@@ -38,6 +40,7 @@ def merge_sort_reduce(target, start, end):
         merge_sort_reduce(target, start, middle)
         merge_sort_reduce(target, middle + 1, end)
         merge_sort_merge(target, start, middle, end)
+
 
 def merge_sort(source):
     '''
@@ -48,6 +51,7 @@ def merge_sort(source):
     merge_sort_reduce(target, 0, len(target) - 1)
     return target
 
-source = [3,2,1,5,8,6,3,9,7,8,9,10,11,12,3,17,13,15]
+
+source = [3, 2, 1, 5, 8, 6, 3, 9, 7, 8, 9, 10, 11, 12, 3, 17, 13, 15]
 print(source)
 print(merge_sort(source))
