@@ -8,7 +8,8 @@ def heap_sort_down(target, parentIndex, length):
     tmp = target[parentIndex]
     childIndex = 2 * parentIndex + 1
     while childIndex < length:
-        if (childIndex + 1) < length and target[childIndex + 1] > target[childIndex]:
+        n = childIndex + 1
+        if n < length and target[n] > target[childIndex]:
             childIndex += 1
         if tmp >= target[childIndex]:
             break
