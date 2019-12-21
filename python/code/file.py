@@ -1,5 +1,6 @@
 import os
 
+
 def list_file(folder, deep=False):
     '''
     列举目录下的文件
@@ -15,6 +16,7 @@ def list_file(folder, deep=False):
             result.append(path)
     return result
 
+
 def list_folder(folder, deep=False):
     '''
     列举目录下的目录
@@ -28,6 +30,13 @@ def list_folder(folder, deep=False):
             if deep:
                 result.extend(list_folder(path))
     return result
+
+def haming_distance(a, b):
+    '''
+    汉明距离
+    '''
+    d = bin(int(a) ^ int(b))
+    return d.count('1')
 
 print(list_file('.'))
 print(list_file('.', True))
