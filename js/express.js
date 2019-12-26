@@ -23,9 +23,21 @@ function isAlpha(c) {
 }
 
 /**
+ * 数字头部字符
+ * 
+ * @param {*} c 
+ */
+function isNumberHead(c) {
+    return /^[\d-+]$/.test(c);
+}
+
+/**
  * 词素
  */
 class Lexeme {
+    token;
+    info;
+
     constructor(token, info) {
         this.token = token;
         this.info = info;
@@ -37,30 +49,24 @@ class Lexeme {
  *
  */
 class Lexer {
-    /**
-     * 初始化
-     */
-    constructor() {
-        this.text = null; // 文本
-        this.index = 0; // 当前字符索引
-    }
+    able = true;
+    text = null;
+    index = 0;
 
     /**
      * 词法分析
      */
     lex(text) {
-        let able = true;
         let result = [];
+        this.able = true;
         this.text = text;
         this.index = 0;
-        setTimeout(() => {
-            able = false;
-        }, 3000);
-        while (able && this.index < this.text.length) {
+        setTimeout(() => this.able = false, 3000);
+        while (this.able && this.index < this.text.length) {
             let lexeme = this.pop();
             result.push(lexeme);
         }
-        if (!able) throw new Error('词法分析超时');
+        if (!this.able) throw new Error('词法分析超时');
         return result;
     }
 
@@ -73,7 +79,7 @@ class Lexer {
             this.index += 1;
         }
         let c = this.text[this.index];
-        if (isDigit(c) || c == '-') {
+        if (isNumberHead(c)) {
             return this.popNumber();
         } else if (c == '$') {
             return this.popName();
@@ -90,10 +96,9 @@ class Lexer {
         let i = this.index;
         let result = [];
         let hasDot = 0;
-        if (this.text[i] == '-') {
-            result.push('-');
-            i++;
-        }
+
+        result.push(this.text[i++]);
+
         while (i < this.text.length) {
             let c = this.text[i];
             if (isDigit(c)) {
@@ -239,13 +244,8 @@ class Lexer {
  *
  */
 class Expression {
-    /**
-     * 初始化
-     */
-    constructor() {
-        this.index = 0;
-        this.lexemes = null;
-    }
+    index = 0;
+    lexemes = null;
 
     /**
      * 字符串化
