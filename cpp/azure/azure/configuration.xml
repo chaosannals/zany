@@ -1,0 +1,13 @@
+<configure>
+	<screen>
+		<full>false</full>
+		<width>800</width>
+		<height>600</height>
+	</screen>
+	<font>
+		
+	</font>
+	<module>
+		original
+	</module>
+</configure>
