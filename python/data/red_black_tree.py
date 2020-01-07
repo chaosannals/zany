@@ -99,6 +99,59 @@ class RedBlackTree:
                         self.left_rotate(z.top.top)
         self.root.color ='black'
 
+    def find(self, key):
+        '''
+        '''
+        z = self.root
+        while z != None:
+            if key < z.key:
+                z = z.left
+            elif key > z.key:
+                z = z.right
+            else:
+                return z
+        return z
+
+    def remove(self, key):
+        '''
+        '''
+        z = self.find(key)
+        y = z
+        yc = y.color
+        if z.left == None:
+            x = z.right
+            self.transplant(z, z.right)
+        elif z.right == None:
+            x = z.left
+            self.transplant(z, z.left)
+        else:
+            # y = ''
+            yc = y.color
+            x = y.right
+            if y.top == z:
+                x.top = y
+            else:
+                self.transplant(y, y.right)
+                y.right = z.right
+                y.right.top = y
+            self.transplant(z, y)
+            y.left = z.left
+            y.left.top = y
+            y.color = z.color
+        # if yc == 'black':
+            #
+
+        
+
+    def transplant(self, u, v):
+        if u.top == None:
+            self.root = v
+        elif u == u.top.left:
+            u.top.left = v
+        else:
+            u.top.right = v
+        v.top = u.top
+
     def left_rotate(self, x):
         '''
         左旋。
@@ -143,4 +196,12 @@ rbt.insert(6)
 rbt.insert(2)
 rbt.insert(3)
 rbt.insert(1)
+rbt.insert(16)
+rbt.insert(17)
+rbt.insert(18)
+rbt.insert(16)
+rbt.insert(12)
+rbt.insert(13)
+rbt.insert(11)
 print(rbt.stringify())
+print(rbt.find(17).stringify())
