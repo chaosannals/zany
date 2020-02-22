@@ -1,3 +1,8 @@
+// 编译器 源码字符集 设为 UTF-8 
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
 dependencies {
     // java bean 自动生成库
     compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.10'
