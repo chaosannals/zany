@@ -1,3 +1,9 @@
+repositories {
+    jcenter()
+	// jar 目录还需要再 dependencies 引入需要的包
+    flatDir { dirs 'libs' }
+}
+
 // 编译器 源码字符集 设为 UTF-8 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'

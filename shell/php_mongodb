@@ -1,0 +1,7 @@
+#!/bin/bash
+wget -c https://pecl.php.net/get/mongodb-1.6.1.tgz
+tar -zxvf mongodb-1.6.1.tgz
+cd mongodb-1.6.1
+/www/server/php/73/bin/phpize
+./configure --with-php-config=/www/server/php/73/bin/php-config
+make && make install
