@@ -36,6 +36,6 @@ class Throttle {
         }
         this.task.able = false;
         this.task = new Task();
-        return this.debounce.delay(interval - delta);
+        return this.task.apply(interval - delta);
     }
 }
