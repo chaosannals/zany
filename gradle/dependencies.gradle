@@ -14,3 +14,11 @@ dependencies {
     compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.10'
     annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.10'
 }
+
+jar {
+    // 设置 META-INF/MANIFEST.MF 属性
+    manifest {
+        attributes 'Main-Class': 'App'
+        attributes 'Class-Path': 'libs/a.jar libs/b.jar'
+    }
+}
