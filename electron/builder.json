@@ -1,0 +1,61 @@
+{
+    "devDependencies": {
+        "electron": "^8.2.0",
+        "electron-builder": "^22.2.0"
+    },
+    "build": {
+        "productName": "名字",
+        "appId": "com.app.id",
+        "copyright": "版权",
+        "directories": {
+            "output": "build/install"
+        },
+        "nsis": {
+            "oneClick": false,
+            "allowElevation": true,
+            "allowToChangeInstallationDirectory": true,
+            "installerIcon": "./favicon.ico",
+            "uninstallerIcon": "./favicon.ico",
+            "installerHeaderIcon": "./favicon.ico",
+            "createDesktopShortcut": true,
+            "createStartMenuShortcut": true,
+            "include": "build/script/installer.nsh",
+            "shortcutName": "简称"
+        },
+        "dmg": {
+            "contents": [
+                {
+                    "x": 410,
+                    "y": 150,
+                    "type": "link",
+                    "path": "/Applications"
+                },
+                {
+                    "x": 130,
+                    "y": 150,
+                    "type": "file"
+                }
+            ]
+        },
+        "mac": {
+            "icon": "favicon.ico",
+            "artifactName": "${name}_setup_${version}.${ext}"
+        },
+        "win": {
+            "icon": "favicon.ico",
+            "target": [
+                {
+                    "target": "nsis",
+                    "arch": [
+                        "x64"
+                    ]
+                }
+            ],
+            "artifactName": "${name}_setup_${version}.${ext}"
+        },
+        "linux": {
+            "icon": "favicon.ico",
+            "artifactName": "${name}_setup_${version}.${ext}"
+        }
+    }
+}
