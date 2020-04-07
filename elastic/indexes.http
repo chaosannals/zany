@@ -1,0 +1,32 @@
+### 创建索引
+PUT http://{{es_host}}/tester_v2 HTTP/1.1
+Content-Type: application/json
+
+{
+    "settings": {
+        "index.max_result_window": 10000000 // 最大结果窗口
+    },
+    "mappings": {
+        "properties": {
+            "account": {
+                "type": "text",
+                "fields": { // 映射字段
+                    "raw": { // 名
+                        "type": "keyword" // 用于排序的类型
+                    }
+                }
+            },
+            "nickname": { // 字段
+                "type": "text",
+                "fields": { // 映射字段
+                    "raw": { // 名
+                        "type": "keyword" // 用于排序的类型
+                    }
+                }
+            }
+        }
+    }
+}
+
+### 删除索引
+DELETE http://{{es_host}}/tester_v1 HTTP/1.1
