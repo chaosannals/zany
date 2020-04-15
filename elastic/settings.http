@@ -3,5 +3,21 @@ PUT http://{{es_host}}/tester/_settings HTTP/1.1
 Content-Type: application/json
 
 {
+    "analysis": {
+        "analyzer": {
+            "number_analyzer": {
+                "type": "custom",
+                "tokenizer": "number_ngram",
+                "filter": ["trim"]
+            }
+        },
+        "tokenizer": {
+            "number_ngram": {
+                "type": "ngram",
+                "min_gram": 1,
+                "max_gram": 1
+            }
+        }
+    },
     "index.max_result_window": 10000000 // 最大结果窗口
 }
