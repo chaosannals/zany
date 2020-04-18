@@ -1,0 +1,9 @@
+#!/bin/bash
+
+yum list docker-ce --showduplicates | sort -r
+
+sudo yum install \
+    docker-ce-<VERSION_STRING> \
+    docker-ce-cli-<VERSION_STRING> \
+    containerd.io
+    
