@@ -1,0 +1,31 @@
+#!/bin/bash
+
+folder=$1
+
+# 日志文件文件夹
+if [ ! -d $folder ]; then
+    mkdir -p $folder
+fi
+
+# 生成日志名
+filename=$(date "+%Y%m%d")
+filepath="$folder/$filename.log"
+
+# 文件过大迁移文件
+function move_log() {
+    local size=$(ls -l $filepath | awk '{print $5}')
+    if [ $size -gt 100 ]; then
+        local timestamp=$(date "+%H%M%S")
+        local newpath="$folder/$filename-$timestamp.log"
+        mv $filepath $newpath
+    fi
+}
+
+# 循环获取日志
+while true; do
+    read content
+    if [ -f $filepath ]; then
+        move_log
+    fi
+    echo $content >> $filepath
+done
