@@ -1,7 +1,8 @@
 #!/bin/bash
 
-wget https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.25.1.tar.gz
-tar xzf git-2.25.1.tar.gz
-cd git-2.25.1
+version=2.26.2
+wget https://mirrors.edge.kernel.org/pub/software/scm/git/git-$version.tar.gz
+tar xzf git-$version.tar.gz
+cd git-$version
 ./configure --prefix=/usr/local
 make && make install
