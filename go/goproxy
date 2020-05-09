@@ -1,0 +1,3 @@
+#!/bin/bash
+
+go env -w GOPROXY=export GOPROXY=https://mirrors.aliyun.com/goproxy/
