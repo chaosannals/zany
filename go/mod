@@ -1,0 +1,5 @@
+#!/bin/bash
+
+go env -w GO111MODULE=on
+
+go mod init github.com/chaosannals/project
