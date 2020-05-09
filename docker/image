@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# 把容器 container 的内容提交成 author/image:tag 镜像
+docker commit container author/image:tag
+
+# 把 author/image:tag 推到 DockerHub（需登录）
+docker push author/image:tag
+
+# 在 . 路径下找到 dockerfile 并构建镜像 author/image:tag
+docker build -t author/image:tag .
