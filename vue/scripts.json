@@ -1,0 +1,9 @@
+{
+  "main": "libfolder/libname.common.js",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+	"build": "vue-cli-service build",
+    "buildlib": "vue-cli-service build --target lib --name libname --dest libfolder source/all.js",
+    "lint": "vue-cli-service lint"
+  }
+}
