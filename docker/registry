@@ -4,8 +4,13 @@ docker pull registry
 
 ######### ① START 配置文件在宿主机，【与②选一】
 
+# 如果宿主没有 htpasswd 看下一条。
 htpasswd -Bb -c /host/pass/path user pass
 
+# 如果宿主没有 htpasswd 可以通过下面的命令由容器执行。用完记得删除临时生成的容器。
+docker run --entrypoint htpasswd registry:latest -Bbn user pass >/host/pass/path
+
+# 使用 docker 参数传入环境变量信息。
 docker run -d -e "REGISTRY_AUTH=htpasswd" -e "REGISTRY_AUTH_HTPASSWD_REALM=Registry Realm" -e "REGISTRY_AUTH_HTPASSWD_PATH=/pass/path" -v /host/pass/path:/pass/path -p 5000:5000 --restart=always --name registry registry:latest
 
 ######### ① END
