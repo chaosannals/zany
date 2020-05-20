@@ -11,12 +11,12 @@ htpasswd -Bb -c /host/pass/path user pass
 docker run --entrypoint htpasswd registry:latest -Bbn user pass >/host/pass/path
 
 # 使用 docker 参数传入环境变量信息。
-docker run -d -e "REGISTRY_AUTH=htpasswd" -e "REGISTRY_AUTH_HTPASSWD_REALM=Registry Realm" -e "REGISTRY_AUTH_HTPASSWD_PATH=/pass/path" -v /host/pass/path:/pass/path -p 5000:5000 --restart=always --name registry registry:latest
+docker run -d --insecure-registry -e "REGISTRY_AUTH=htpasswd" -e "REGISTRY_AUTH_HTPASSWD_REALM=Registry Realm" -e "REGISTRY_AUTH_HTPASSWD_PATH=/pass/path" -v /host/pass/path:/pass/path -p 5000:5000 --restart=always --name registry registry:latest
 
 ######### ① END
 
 ######### ② START 这一步配置文件在容器里。【与①选一】
-docker run -d -p 5000:5000 --restart=always --name registry registry:latest
+docker run -d --insecure-registry -p 5000:5000 --restart=always --name registry registry:latest
 
 # 创建用户密码
 docker exec container htpasswd -Bb -c /pass/path user pass
