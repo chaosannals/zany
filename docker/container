@@ -20,3 +20,18 @@ docker -v /host/path:/container/path
 
 # 
 docker --entrypoint 
+
+# 设置重启为任何
+docker --restart=always
+
+# 启动容器
+docker start hashorname
+
+# 停止容器
+docker stop hashorname
+
+# 杀死容器
+docker kill hashorname
+
+# 重启容器
+docker restart hashorname
