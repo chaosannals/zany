@@ -18,6 +18,9 @@ docker -p 5000:6000
 # 路径挂载
 docker -v /host/path:/container/path
 
+# 指定运行路径
+docker -w /container/path
+
 # 
 docker --entrypoint 
 
