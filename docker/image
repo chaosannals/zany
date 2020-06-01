@@ -8,3 +8,6 @@ docker push author/image:tag
 
 # 在 . 路径下找到 dockerfile 并构建镜像 author/image:tag
 docker build -t author/image:tag .
+
+# 清除 <none> 的镜像
+docker rmi $(docker images | grep "<none>" | awk '{print $3}')
