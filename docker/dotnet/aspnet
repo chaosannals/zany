@@ -1,3 +1,7 @@
 #!/bin/bash
 
+# 旧版
 docker pull microsoft/aspnetcore
+
+#
+docker pull mcr.microsoft.com/dotnet/core/aspnet

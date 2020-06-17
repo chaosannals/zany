@@ -1,3 +1,7 @@
 #!/bin/bash
 
+# 版本太老，是 core 2.1
 docker pull microsoft/dotnet
+
+# 
+docker pull mcr.microsoft.com/dotnet/core/sdk
