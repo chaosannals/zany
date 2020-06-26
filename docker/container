@@ -38,3 +38,6 @@ docker kill hashorname
 
 # 重启容器
 docker restart hashorname
+
+# 限制内存
+docker -m 200M
