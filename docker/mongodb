@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# 容器
+docker run -p 27017:27017 -v /host/db:/data/db -d --restart=always --name mongodb mongo
