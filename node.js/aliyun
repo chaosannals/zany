@@ -1,1 +1,4 @@
+#!/bin/bash
+
+# 阿里源同步npmjs的包
 https://npm.taobao.org/sync/yourpackage
