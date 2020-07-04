@@ -3,5 +3,8 @@
 # 阿里源同步npmjs的包
 https://npm.taobao.org/sync/yourpackage
 
-# 指定 chromedriver 包二进制路径
+# 指定 chromedriver 二进制资源
 npm i chromedriver --chromedriver_cdnurl=http://cdn.npm.taobao.org/dist/chromedriver
+
+# 指定 electron 二进制资源
+npm i -D electron --electron_mirror=https://npm.taobao.org/mirrors/electron/
