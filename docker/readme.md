@@ -44,6 +44,29 @@ docker run -p 6379:6379 -v /host/data:/data -d --restart=always --name redis red
 
 ### MySQL
 
+还可以挂载配置文件路径，需要自己预先弄。
+
 ```sh
 docker run -e MYSQL_ROOT_PASSWORD=password -p 3306:3306 -v /host/var/lib/mysql:/var/lib/mysql -d --restart=always --name mysql mysql
 ```
+
+### ElasticSearch
+
+```sh
+docker run -p 9200:9200 -p 9300:9300 -v /host/elasticsearch:/usr/share/elasticsearch/data -e "discovery.type=single-node" -d --restart=always --name elasticsearch elasticsearch
+```
+
+### Milvus
+
+需要在官网下载配置文件。
+
+```sh
+docker run -p 19530:19530 -p 19121:19121 -p 9091:9091 -v /host/milvus/db:/var/lib/milvus/db -v /host/milvus/conf:/var/lib/milvus/conf -v /host/milvus/logs:/var/lib/milvus/logs -v /host/milvus/wal:/var/lib/milvus/wal --restart=always --name milvus milvusdb/milvus:cpu-latest
+```
+
+### PHP-FPM
+
+```sh
+docker run -v /host/www:/www -p 9000:9000 -d --restart=always --name php-fpm php:fpm
+```
+
