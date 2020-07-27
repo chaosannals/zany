@@ -42,14 +42,6 @@ docker run -p 27017:27017 -v /host/db:/data/db -v /host/configdb:/data/configdb 
 docker run -p 6379:6379 -v /host/redis/data:/data -v /host/redis/config:/etc/redis -v /host/redis/module:/mod -d --restart=always --name redis redis redis-server /etc/redis/redis.conf
 ```
 
-### MySQL
-
-还可以挂载配置文件路径，需要自己预先弄。
-
-```sh
-docker run -e MYSQL_ROOT_PASSWORD=password -p 3306:3306 -v /host/var/lib/mysql:/var/lib/mysql -d --restart=always --name mysql mysql
-```
-
 ### ElasticSearch
 
 ```sh
