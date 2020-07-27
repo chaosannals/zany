@@ -36,12 +36,6 @@
 docker run -p 27017:27017 -v /host/db:/data/db -v /host/configdb:/data/configdb -d --restart=always --name mongodb mongo
 ```
 
-### Redis
-
-```sh
-docker run -p 6379:6379 -v /host/redis/data:/data -v /host/redis/config:/etc/redis -v /host/redis/module:/mod -d --restart=always --name redis redis redis-server /etc/redis/redis.conf
-```
-
 ### ElasticSearch
 
 ```sh
