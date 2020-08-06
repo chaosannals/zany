@@ -16,3 +16,43 @@ function user_cmd() {
     local action="runuser $1 -s /bin/bash -c '$2'"
     eval $action
 }
+
+function get_today() {
+    date +%Y-%m-%d
+}
+
+function day_ago() {
+    date -d "$1 day ago" +%Y-%m-%d
+}
+
+function get_timestamp() {
+    date -d "$1" +%s
+}
+
+function find_at() {
+    local start=$(date -d $1 +%s)
+    local end=$(date -d $2 +%s)
+}
+
+function get_suffix() {
+    local suffix=${1##*.}
+    if [ $suffix != $1 ]; then
+        echo $suffix
+    fi
+}
+
+function add() {
+    if [ "$2" == '' ]; then
+        echo $(($1 + 1))
+    else
+        echo $(($1 + $2))
+    fi
+}
+
+function get_mtime() {
+    ls --full-time $1 | awk '{print $6}'
+}
+
+function get_atime() {
+    ls --time atime --full-time $1 | awk '{print $6}'
+}
