@@ -17,12 +17,27 @@ function user_cmd() {
     eval $action
 }
 
+function get_now() {
+    if [ $1 == 'timestamp' ]; then
+        date +%s
+    elif [ $1 == 'today' ]; then
+        date '+%Y-%m-%d'
+    else
+        date '+%Y-%m-%d %H:%M:%S'
+    fi
+}
+
 function get_today() {
-    date +%Y-%m-%d
+    date '+%Y-%m-%d'
 }
 
 function day_ago() {
-    date -d "$1 day ago" +%Y-%m-%d
+    if [ $2 == 'timestamp' ]; then
+        d=$(date -d "$1 day ago" '+%Y-%m-%d')
+        date -d $d '+%s'
+    else
+        date -d "$1 day ago" '+%Y-%m-%d'
+    fi
 }
 
 function get_timestamp() {
@@ -70,4 +85,15 @@ function add() {
     else
         echo $(($1 + $2))
     fi
+}
+
+function echo_over() {
+    echo -en "$1\r"
+}
+
+function next_at() {
+    tomorrow=$(date -d "-1 day ago" '+%Y-%m-%d')
+    e=$(date -d $tomorrow '+%s')
+    s=$(date +%s)
+    echo $(($e - $s))
 }
