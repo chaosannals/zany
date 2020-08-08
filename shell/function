@@ -95,5 +95,9 @@ function next_at() {
     tomorrow=$(date -d "-1 day ago" '+%Y-%m-%d')
     e=$(date -d $tomorrow '+%s')
     s=$(date +%s)
-    echo $(($e - $s))
+    if [ $1 != '' ]; then
+        echo $(($e - $s + $1))
+    else
+        echo $(($e - $s))
+    fi
 }
