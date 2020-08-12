@@ -8,4 +8,5 @@ git pull
 chown -R www:www .
 
 # 远程接口，通知远程程序拉代码。
-wget --post-data 'user=git&password=PASSWORD&other=info' http://your.webhook.com
+wget --post-data 'user=git&password=PASSWORD&other=info' 'http://your.webhook.com'
+curl -d 'user=git&password=PASSWORD&other=info' 'http://your.webhook.com'
