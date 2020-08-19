@@ -47,7 +47,7 @@ docker run -p 9200:9200 -p 9300:9300 -v /host/elasticsearch:/usr/share/elasticse
 需要在官网下载配置文件。
 
 ```sh
-docker run -p 19530:19530 -p 19121:19121 -p 9091:9091 -v /host/milvus/db:/var/lib/milvus/db -v /host/milvus/conf:/var/lib/milvus/conf -v /host/milvus/logs:/var/lib/milvus/logs -v /host/milvus/wal:/var/lib/milvus/wal --restart=always --name milvus milvusdb/milvus:cpu-latest
+docker run -p 19530:19530 -p 19121:19121 -p 9091:9091 -v /host/milvus/db:/var/lib/milvus/db -v /host/milvus/conf:/var/lib/milvus/conf -v /host/milvus/logs:/var/lib/milvus/logs -v /host/milvus/wal:/var/lib/milvus/wal --restart=always -d --name milvus milvusdb/milvus:cpu-latest
 ```
 
 ### PHP-FPM
@@ -56,3 +56,21 @@ docker run -p 19530:19530 -p 19121:19121 -p 9091:9091 -v /host/milvus/db:/var/li
 docker run -v /host/www:/www -p 9000:9000 -d --restart=always --name php-fpm php:fpm
 ```
 
+## Compose
+
+```bash
+# 以守护进程模式运行
+docker-compose up -d
+
+# 删除
+docker-compose rm
+
+# 启动
+docker-compose start
+
+# 关闭
+docker-compose stop
+
+# 重启
+docker-compose restart
+```

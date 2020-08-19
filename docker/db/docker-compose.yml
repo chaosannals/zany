@@ -1,0 +1,64 @@
+version: "3.8"
+
+services:
+    mysql:
+        container_name: mysql
+        image: mysql
+        restart: always
+        ports: 
+            - "3306:3306"
+        environment: 
+            - MYSQL_ROOT_PASSWORD=root
+        volumes:
+            - /host/mysql/data:/var/lib/mysql
+            - /host/mysql/config:/etc/mysql
+            - /host/mysql/file:/var/lib/mysql-files
+        networks:
+            - zanynet
+
+    redis:
+        container_name: redis
+        image: redis
+        restart: always
+        ports:
+            - "6379:6379"
+        volumes:
+            - /host/redis/data:/data
+            - /host/redis/config:/etc/redis
+            - /host/redis/module:/mod
+        command: redis-server /etc/redis/redis.conf
+        networks:
+            - zanynet
+
+    milvus:
+        container_name: milvus
+        image: milvusdb/milvus:cpu-latest
+        restart: always
+        ports:
+            - "19530:19530"
+            - "19121:19121"
+            - "9091:9091"
+        volumes:
+            - /host/milvus/db:/var/lib/milvus/db
+            - /host/milvus/conf:/var/lib/milvus/conf
+            - /host/milvus/logs:/var/lib/milvus/logs
+            - /host/milvus/wal:/var/lib/milvus/wal
+        networks:
+            - zanynet
+
+    mongodb:
+        container_name: mongodb
+        image: mongo
+        restart: always
+        ports:
+            - "27017:27017"
+        volumes:
+            - /host/mongodb/data:/data/db
+            - /host/mongodb/config:/data/configdb
+        networks:
+            - zanynet
+
+networks:
+    zanynet:
+        name: zanynet
+        driver: bridge
