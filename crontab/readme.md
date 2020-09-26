@@ -10,6 +10,12 @@ crontab -e
 
 # 查看计划任务
 crontab -l
+
+# 用 systemctl 重启
+systemctl restart crond
+
+# 用 service 重启
+service crond restart
 ```
 
 ## Crontab 定时任务格式
