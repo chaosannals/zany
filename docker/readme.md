@@ -74,3 +74,9 @@ docker-compose stop
 # 重启
 docker-compose restart
 ```
+
+## stats
+
+```bash
+docker stats
+```
