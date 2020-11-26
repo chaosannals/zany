@@ -36,12 +36,6 @@
 docker run -p 27017:27017 -v /host/db:/data/db -v /host/configdb:/data/configdb -d --restart=always --name mongodb mongo
 ```
 
-### ElasticSearch
-
-```sh
-docker run -p 9200:9200 -p 9300:9300 -v /host/elasticsearch:/usr/share/elasticsearch/data -e "discovery.type=single-node" -d --restart=always --name elasticsearch elasticsearch
-```
-
 ### Milvus
 
 需要在官网下载配置文件。
