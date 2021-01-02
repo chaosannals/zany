@@ -1,6 +1,9 @@
 # MySQL
 
 ```sql
+# 显示二进制文件列表
+SHOW BINARY LOGS
+
 /* 删除指定日志文件 */
 PURGE MASTER LOGS TO 'mysql-bin.010';
 
