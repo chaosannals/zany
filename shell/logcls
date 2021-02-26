@@ -1,0 +1,54 @@
+#!/bin/bash
+
+# nohup ./logclear >> logclear.log 2>&1 &
+
+function rm_files() {
+    local count=0
+    local rmc=0
+    for i in $(ls $1)
+    do
+        local p="$1/$i"
+        local bn=$(basename $p)
+        local suffix=${bn##*.}
+        count=$(($count + 1))
+        if [ -f $p -a $suffix == $2 ]; then
+            local t=$(ls --full-time $p | awk '{print $6}')
+            local tstamp=$(date -d $t +%s)
+            if [ $3 -gt $tstamp ]; then
+                rmc=$(($rmc + 1))
+                rm -f $p
+            fi
+        fi
+        if [ -d $p ]; then
+            rm_files $p $2 $3
+        fi
+    done
+    echo "$count - $rmc in $1"
+}
+
+function next_at() {
+    s=$(date +%s)
+    tomorrow=$(date -d "-1 day ago" '+%Y-%m-%d')
+    e=$(date -d $tomorrow '+%s')
+    if [ $1 != '' ]; then
+        echo $(($e - $s + $1))
+    else
+        echo $(($e - $s))
+    fi
+}
+
+folder_path=$(pwd)
+file_suffix='log'
+
+while true
+do
+    today=$(date +%Y-%m-%d)
+    logday=$(date -d '15 day ago' +%Y-%m-%d)
+    logstamp=$(date -d $logday +%s)
+    echo "today: $today ; clear log last: $logday"
+    rm_files $folder_path $file_suffix $logstamp
+    echo "clear final."
+    nt=$(next_at 3600)
+    echo "sleep $nt s"
+    sleep "${nt}s"
+done
