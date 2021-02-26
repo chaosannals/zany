@@ -1,5 +1,6 @@
-#!/bin/bash
+# pacman
 
+```bash
 # 同步源并更新系统
 pacman -Syu
 
@@ -14,3 +15,4 @@ pacman -Q zlib
 
 # 查看 gcc 详细信息
 pacman -Qi zlib
+```
