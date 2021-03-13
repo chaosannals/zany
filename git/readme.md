@@ -18,10 +18,12 @@ git rm --cached --ignore-unmatch /file/path
 
 ```bash
 # 去掉 git add 添加的记录。
+# 只对 git add 但是没有 git commit 的记录有效。
 git restore --staged /file_or_dir/path
 
 # 没有被 git add 的文件会回退修改的内容。
 # 但是仅限文件修改，算是弱化版的 git checkout .
+# 只对没有 git add 的文件有效。
 git restore /file_or_dir/path
 ```
 
