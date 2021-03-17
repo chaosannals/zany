@@ -50,3 +50,10 @@ git branch -D <name>
 # 删除远程分支
 git push <remote> --delete <name>
 ```
+
+## 子模块 submodule
+
+```bash
+# 添加子模块
+git submodule add <url> <name>
+```
