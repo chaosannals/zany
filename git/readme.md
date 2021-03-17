@@ -40,3 +40,13 @@ git checkout -- /file/path
 ## git filter-branch
 
 过滤分支，名不副实，这个命令是会修改记录的。并非检索信息，命名有误导性。该命令选定遍历器后会遍历所有分支。
+
+## 删除分支
+
+```bash
+# 删除本地分支
+git branch -D <name>
+
+# 删除远程分支
+git push <remote> --delete <name>
+```
