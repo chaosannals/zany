@@ -85,4 +85,10 @@ git stash pop
 
 # 指定索引弹出，可以 git stash list 看到索引
 git stash pop --index 1
+
+# 查看改动，最近一条
+git stash show 
+
+# 查看改动，指定索引
+git stash show 1
 ```
