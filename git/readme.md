@@ -74,9 +74,15 @@ git push <remote> <local_name>:<remote_name>
 ## stash 暂存命令
 
 ```bash
-# 把修改暂存起来，内容在当前分支撤回。
+# 查看暂存列表
+git stash list
+
+# 把 git add 保存的暂存起来，内容在当前分支撤回。
 git stash
 
-# 把暂存的修改放出。
+# 把暂存的修改放出，最近一条。
 git stash pop
+
+# 指定索引弹出，可以 git stash list 看到索引
+git stash pop --index 1
 ```
