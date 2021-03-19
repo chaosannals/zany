@@ -70,3 +70,13 @@ git pull <remote> <remote_name>:<local_name>
 # 推送本地分支到远程分支
 git push <remote> <local_name>:<remote_name>
 ```
+
+## stash 暂存命令
+
+```bash
+# 把修改暂存起来，内容在当前分支撤回。
+git stash
+
+# 把暂存的修改放出。
+git stash pop
+```
