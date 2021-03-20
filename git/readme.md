@@ -64,6 +64,9 @@ git submodule add <url> <name>
 # 添加远程库
 git remote add <remote> <url>
 
+# 重命名
+git remote rename <name> <newname>
+
 # 拉取远程分支到本地分支
 git pull <remote> <remote_name>:<local_name>
 
@@ -79,6 +82,9 @@ git stash list
 
 # 把 git add 保存的暂存起来，内容在当前分支撤回。
 git stash
+
+# 添加备注信息
+git stash -m "your message content."
 
 # 把暂存的修改放出，最近一条。
 git stash pop
