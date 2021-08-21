@@ -3,8 +3,10 @@
 ## 单文件打包
 
 ```bash
+# --self-contained 随应用程序一起发布 .NET 运行时，这样就不需要在目标计算机上安装运行时。
+
 # Linux
-dotnet publish -r linux-x64 /p:PublishSingleFile=true
+dotnet publish -r linux-x64 --self-contained=true /p:PublishSingleFile=true
 
 # Windows
 dotnet publish -r win-x64 --self-contained=false /p:PublishSingleFile=true
