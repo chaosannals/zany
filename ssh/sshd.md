@@ -1,6 +1,6 @@
 # SSHD 配置
 
-## Win10 OpenSSH
+## Win10 OpenSSH 设置公钥免密登录
 
 修改C:\ProgramData\ssh\sshd_config
 
