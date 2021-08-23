@@ -22,3 +22,7 @@ PATH = %PATH%;%GRADLE_HOME%\bin
 
 ## Gradle 基本命令
 
+```bash
+# 执行后根据提示选择创建项目。
+gradle init
+```
