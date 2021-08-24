@@ -8,6 +8,9 @@
 # Linux
 dotnet publish -r linux-x64 --self-contained=true /p:PublishSingleFile=true
 
+# 指定路径 -o <path>
+dotnet publish -o ./publish -r linux-x64 --self-contained=true /p:PublishSingleFile=true
+
 # Windows
 dotnet publish -r win-x64 --self-contained=false /p:PublishSingleFile=true
 
