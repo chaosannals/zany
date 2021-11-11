@@ -7,6 +7,10 @@ repositories {
 // 编译器 源码字符集 设为 UTF-8 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
+
+    // 指定版本，这个经常改地方，不对了就再查。
+    sourceCompatibility = '8'
+    targetCompatibility = '8'
 }
 
 // 文档字符集 设为 UTF-8
