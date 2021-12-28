@@ -6,6 +6,24 @@ openssl req -newkey rsa:2048 -nodes -keyout myssl.key -x509 -days 365 -out myssl
 
 # 生成 myssl.pfx
 openssl pkcs12 -export -in myssl.cer -inkey myssl.key -out myssl.pfx
+
+# 生成 myssl.pfx 不指定证书
+openssl pkcs12 -export -nocerts -inkey myssl.key -out myssl.pfx
+```
+
+## OpenSSH
+
+[转换工具 PuttyGen](https://www.puttygen.com/download-putty)
+
+```bash
+# 新版本 ssh-keygen 不指定类型生成 OPENSSH PRIVATE KEY
+ssh-keygen
+
+# 通过指定类型 RSA 得到老版本的 RSA PRIVATE KEY
+ssh-keygen -m PEM -t rsa
+
+# 转换 OPENSSH PRIVATE KEY 为 RSA PRIVATE KEY 这时候文件 myossh.pem 会被直接替换，如果要老文件需要自行保存。
+ssh-keygen -p -f myossh.pem -m PEM
 ```
 
 ## Windows SignTool
