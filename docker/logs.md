@@ -10,3 +10,7 @@ docker logs --since "2016-06-01" --tail 10 mycontainer
 # -t 显示时间错，如果日子自带了，可以不用。
 docker logs mycontainer --tail 10 -f -t
 ```
+
+cid 为容器ID
+容器日志默认路径：
+/www/server/docker/containers/{cid}/{cid}-json.log
