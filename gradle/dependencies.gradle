@@ -23,6 +23,14 @@ dependencies {
     // java bean 自动生成库
     compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.10'
     annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.10'
+
+    // 3.0 前
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    // 3.0 后
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    // 或者
+    api fileTree(dir: 'libs', include: ['*.jar'])
 }
 
 jar {
