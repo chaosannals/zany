@@ -18,5 +18,5 @@ set https_proxy='http://user:pwd@127.0.0.1:8088'
 
 ```cmd
 set http_proxy='http://127.0.0.1:1088'
-set https_proxy='http://127.0.0.1:81088'
+set https_proxy='http://127.0.0.1:1088'
 ```
