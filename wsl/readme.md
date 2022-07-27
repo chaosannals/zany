@@ -9,9 +9,15 @@ cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }'
 # 查看IP 
 hostname -I
 
+# apt 启用代理， WSL 代理监听端口要 0.0.0.0 不要只接收 127.0.0.1 
+apt install android-sdk -o Acquire::http::proxy=http://172.18.208.1:1088
+
 ## 设置 HTTP 代理
 HTTP_PROXY=<schema://ip:host>
 HTTPS_PROXY=<schema://ip:host>
+
+http_proxy=<schema://ip:host>
+https_proxy=<schema://ip:host>
 ```
 
 Windows Defender 入站规则（管理员身份）
