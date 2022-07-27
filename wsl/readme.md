@@ -1,6 +1,11 @@
 # ubuntu
 
 ```bash
+# 此路径代表 wsl 可通过此路径读 wsl 的内容，文件资源管理器可打开，写入有权限限制。
+\\wsl$
+```
+
+```bash
 # 查看宿主 IP  nameserver
 cat /etc/resolv.conf
 
