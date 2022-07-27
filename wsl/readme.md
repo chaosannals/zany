@@ -4,8 +4,14 @@
 # 查看宿主 IP  nameserver
 cat /etc/resolv.conf
 
+cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }'
+
 # 查看IP 
 hostname -I
+
+## 
+HTTP_PROXY=<schema://ip:host>
+HTTPS_PROXY=<schema://ip:host>
 ```
 
 Windows Defender 入站规则（管理员身份）
