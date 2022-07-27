@@ -9,7 +9,7 @@ cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }'
 # 查看IP 
 hostname -I
 
-## 
+## 设置 HTTP 代理
 HTTP_PROXY=<schema://ip:host>
 HTTPS_PROXY=<schema://ip:host>
 ```
