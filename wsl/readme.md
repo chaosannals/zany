@@ -76,3 +76,8 @@ sudo ln -s ~/cmake-3.22.5-linux-x86_64/bin/cmake /usr/bin/cmake
 chmod 777 ninja
 sudo ln -s ~/ninja /usr/bin/ninja
 ```
+
+
+## 限制内存 和 配置
+
+用户目录下 .wslconfig 文件配置。
