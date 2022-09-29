@@ -6,6 +6,9 @@
 # 由镜像 image 创建容器 newcontainer 并运行
 docker run -itd --name newcontainer image
 
+# 删除
+docker rm <container_id>
+
 # 执行命令，让容器（ID 为 hashnumber）打开一个 /bin/bash 的窗口
 docker exec -it hashnumber /bin/bash
 
