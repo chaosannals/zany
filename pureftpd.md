@@ -1,8 +1,6 @@
 # pureftpd
 
 ```bash
-# 目前的实例好像安装后有问题。
-
 # 显示 help
 pure-pw --help
 
@@ -10,7 +8,7 @@ pure-pw --help
 # ftpuser 通过 cat /etc/passwd 对应
 # pureftpd 通过查看配置 SyslogFacility 指定 /etc/passwd 里面的
 # 添加用户 user1  
-# 指定路径 -d /var/www/site1
+# 指定路径 -d /var/www/site1  系统的 user1 要有访问权限
 pure-pw useradd user1 -u ftpuser -g ftpgroup -d /var/www/site1
 
 # 修改密码
