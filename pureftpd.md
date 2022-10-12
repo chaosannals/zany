@@ -20,6 +20,6 @@ pure-pw mkdb
 # 显示用户列表
 pure-pw list
 
-# 显示用户
-pure-pw show
+# 显示用户（查看已有用户参考配置）
+pure-pw show user1
 ```
