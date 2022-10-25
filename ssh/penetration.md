@@ -22,5 +22,5 @@ ssh -N -L localport:hostip:hostport root@host.com -i keypass
 # hostip 线上绑定的IP 比如 127.0.0.1
 # hostport 线上端口
 # -i keypass 密钥
-ssh -N -R localport:hostip:hostport root@host.com -i keypass
+ssh -N -R hostport:hostip:localport root@host.com -i keypass
 ```
