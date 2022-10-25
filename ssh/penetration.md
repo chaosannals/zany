@@ -23,4 +23,9 @@ ssh -N -L localport:hostip:hostport root@host.com -i keypass
 # hostport 线上端口
 # -i keypass 密钥
 ssh -N -R localport:hostip:hostport root@host.com -i keypass
+
+
+# socks5
+# 启动 socks5 代理
+ssh -N -D :1080 root@host.com -i keypass
 ```
