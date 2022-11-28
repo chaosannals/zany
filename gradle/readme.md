@@ -25,4 +25,7 @@ PATH = %PATH%;%GRADLE_HOME%\bin
 ```bash
 # 执行后根据提示选择创建项目。
 gradle init
+
+# 打印依赖关系
+./gradlew :app:dependencies > log.txt
 ```
