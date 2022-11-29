@@ -26,6 +26,9 @@ PATH = %PATH%;%GRADLE_HOME%\bin
 # 执行后根据提示选择创建项目。
 gradle init
 
-# 打印依赖关系
+# 打印全部依赖关系
 ./gradlew :app:dependencies > log.txt
+
+# 指定依赖查找参数
+./gradlew :app:dependencyInsight --dependency fastjson --configuration compile
 ```
