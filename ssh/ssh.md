@@ -27,5 +27,6 @@ ssh -N -R hostport:hostip:localport root@host.com -i keypass
 
 # socks5
 # 启动 socks5 代理
+# 配合浏览器插件 SwitchyOmega
 ssh -N -D :1080 root@host.com -i keypass
 ```
