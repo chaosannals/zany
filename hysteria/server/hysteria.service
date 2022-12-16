@@ -1,0 +1,42 @@
+[Unit]
+# 描述
+Description=Hysteria server daemon
+After=network.target
+
+[Service] # 服务相关的配置
+# 启动方式：
+Type=simple
+
+# 指定 用户
+User=hysteria
+
+# 工作目录
+WorkingDirectory=/hysteria
+
+# 开始命令
+ExecStart=/hysteria/hysteria -c /hysteria/config.json server
+# 重载命令
+ExecReload=/bin/kill -HUP $MAINPID
+# ExecReload=/bin/kill -s HUP $MAINPID
+
+# 关闭模式
+# process 只关闭主进程
+# control-group 连同生成的都杀死
+# none 不会执行关闭，有点可怕。
+KillMode=process
+
+# 重启配置
+; no（默认值）：退出后不会重启
+; on-success：只有正常退出时（退出状态码为0），才会重启
+; on-failure：非正常退出时（退出状态码非0），包括被信号终止和超时，才会重启
+; on-abnormal：只有被信号终止和超时，才会重启
+; on-abort：只有在收到没有捕捉到的信号终止时，才会重启
+; on-watchdog：超时退出，才会重启
+; always：不管是什么退出原因，总是重启
+Restart=on-failure
+
+RestartSec=42s
+
+[Install]
+# 挂载在哪个 target
+WantedBy=multi-user.target
