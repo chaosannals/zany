@@ -74,3 +74,11 @@ docker-compose restart
 ```bash
 docker stats
 ```
+
+
+## 宿主机域名
+
+host.docker.internal
+
+注：不过这个在某些情况下无效，因为他是写在宿主机 C:\Windows\System32\drivers\etc\hosts 文件里面的。
+所以如果 IP 是由路由 DHCP 配置的话 这个文件会是一开始装的时候的那个。也可以手动改 hosts。 很麻烦。。。。。。  或者固定 IP 也行。
