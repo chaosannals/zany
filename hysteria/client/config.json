@@ -1,0 +1,12 @@
+{
+    "server": "your.ip.or.hostname.com:12345",
+    "obfs": "LE3OfBd5hc7bwpnKP6vtjmewA1tplF91",
+    "up_mbps": 10,
+    "down_mbps": 50,
+    "socks5": {
+        "listen": "127.0.0.1:1080"
+    },
+    "http": {
+        "listen": "127.0.0.1:8080"
+    }
+}

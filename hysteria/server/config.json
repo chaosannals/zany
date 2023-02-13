@@ -1,0 +1,6 @@
+{
+    "listen": ":12345",
+    "cert": "/hysteria/my.crt",
+    "key": "/hysteria/my.key",
+    "obfs": "LE3OfBd5hc7bwpnKP6vtjmewA1tplF91"
+}
