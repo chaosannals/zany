@@ -37,3 +37,16 @@ signtool sign /f myssl.pfx /v my.exe
 # 带密码的 pfx
 signtool sign /f myssl.pfx /p passwd /v my.exe
 ```
+
+
+## Linux 或 Windows (WSL) 转 PPK
+
+```bash
+# 安装工具 rpm
+yum install putty
+# 安装工具 dpkg
+apt install putty-tools
+
+# 转换
+puttygen id_rsa -o id_rsa.ppk -O private
+```
