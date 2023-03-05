@@ -26,4 +26,8 @@ certbot -e
 # 上面的命令会通过编辑器打开 配置文件
 # 输入以下内容配置 certbot 定期 renew 证书
 0 12 * * * /usr/bin/certbot renew --quiet
+
+
+# 测试自动续签
+certbot renew --dry-run
 ```
