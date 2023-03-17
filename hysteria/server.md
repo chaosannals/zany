@@ -20,3 +20,5 @@ systemctl restart hysteria
 注：需要证书，cert 和 key 必填或者配置 acme
 
 注：可以通过配置 acme 在 root 下执行的方式获取证书，在 /root/.local/cert.. 里面不然 hysteria 要给添加 443 80 的权限用来使用 acme 注册证书。
+
+注：证书也可以通过 certbot 自动注册的，fullchain.pem 和 privkey.pem 文件。
