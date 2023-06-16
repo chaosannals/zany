@@ -50,3 +50,6 @@ apt install putty-tools
 # 转换
 puttygen id_rsa -o id_rsa.ppk -O private
 ```
+
+
+注：linux 的证书最好由 root 只读，不同用户通过向 root 运行的证书管理程序注册复制路径，由 root 的证书程序在证书创建和更新的时候把证书复制给使用证书的程序。
