@@ -11,7 +11,7 @@ PubkeyAuthentication yes
 AuthorizedKeysFile .ssh/authorized_keys
 PasswordAuthentication no
 
-# 会禁止 root 不能使用密码 即使开启了 PasswordAuthentication yes
+# (这是默认值，所以要关闭要设置 yes)会禁止 root 不能使用密码 即使开启了 PasswordAuthentication yes
 PermitRootLogin prohibit-password
 # 改成 yes 就可以 root 用密码了
 PermitRootLogin yes
