@@ -1,6 +1,12 @@
 # [Zany](https://github.com/chaosannals/zany)
 
-Yet some settings or other.
+一堆乱七八糟的东西。
+
+## AI 
+
+- upscaler LDSR ESRGAN R-ESRGAN 信息补充，变高清。
+
+## 杂乱
 
 ```bash
 # 阿里云 时间纠正服务器
