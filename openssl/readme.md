@@ -1,14 +1,37 @@
 # OpenSSL
 
 ```bash
+# PKCS #8 Unencrypted Private Key
+# -----BEGIN PRIVATE KEY-----
+
+# PKCS #8 Encrypted Private Key
+# -----BEGIN ENCRYPTED PRIVATE KEY-----
+
+# PKCS #1 Private Key
+# -----BEGIN RSA PRIVATE KEY-----
+
+# PKCS #1 Public Key
+# -----BEGIN RSA PUBLIC KEY-----
+
 # 生成 myssl.key myssl cert
+# .key 是 -----BEGIN PRIVATE KEY----- 
+# .pem 是 -----BEGIN RSA PRIVATE KEY----- 
+# .cer 是 -----BEGIN CERTIFICATE-----
 openssl req -newkey rsa:2048 -nodes -keyout myssl.key -x509 -days 365 -out myssl.cer
 
-# 生成 myssl.pfx
+# 生成 myssl.pfx 二进制
 openssl pkcs12 -export -in myssl.cer -inkey myssl.key -out myssl.pfx
 
 # 生成 myssl.pfx 不指定证书
 openssl pkcs12 -export -nocerts -inkey myssl.key -out myssl.pfx
+
+# x509rsa 转 pkcs8 二进制
+# .pem 是 -----BEGIN RSA PRIVATE KEY----- 
+openssl pkcs8 -topk8 -inform PEM -outform DER -in myssl.pem -out myssl.der -nocrypt
+
+# 把 pkcs8 转成 文本形式
+# 输出物 -----BEGIN PRIVATE KEY----- 
+openssl pkcs8 -topk8 -inform DER -outform PEM -in myssl.der -out myssl.key --nocrypt
 ```
 
 ## OpenSSH
