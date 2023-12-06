@@ -13,6 +13,6 @@ pacman -Q
 # 查看是否已经安装 zlib
 pacman -Q zlib
 
-# 查看 gcc 详细信息
+# 查看 zlib 详细信息
 pacman -Qi zlib
 ```
