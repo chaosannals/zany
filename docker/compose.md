@@ -14,3 +14,17 @@ docker compose down --rmi local
 # 逆 compose up, 同时把所有镜像删除
 docker compose down --rmi all
 ```
+
+## 单独指定容器
+
+```bash
+
+# 指定 container-name 停止
+docker compose stop nginx-container-name
+
+# 指定 container-name 下
+docker compose down nginx-container-name --rmi local
+
+# 指定 container-name 上
+docker compose up nginx-container-name -d
+```
