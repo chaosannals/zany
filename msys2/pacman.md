@@ -16,3 +16,9 @@ pacman -Q zlib
 # 查看 zlib 详细信息
 pacman -Qi zlib
 ```
+
+```bash
+# 安装工具链
+pacman -S mingw-w64-x86_64-toolchain
+pacman -S make
+```
