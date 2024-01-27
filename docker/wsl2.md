@@ -1,5 +1,9 @@
 # wsl2
 
+## 新版本 Docker Desktop 已经内置迁移功能
+
+通过  设置  资源（Resources） 界面可以修改。
+
 ## 迁移 docker-desktop-data 位置
 
 ```sh
