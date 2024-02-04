@@ -1,5 +1,12 @@
 # Docker
 
+## Dockerfile
+
+```bash
+# apt 切换网易源
+sed -i 's#http://deb.debian.org#https://mirrors.163.com#g' /etc/apt/sources.list
+```
+
 ## 设置
 
 ### daemon.json
