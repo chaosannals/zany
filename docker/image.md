@@ -1,6 +1,14 @@
 # 镜像
 
 ```bash
+# 查看镜像
+docker images
+
+# grep 指定正则 清除镜像
+docker images | grep 'your_mark[[:space:]]*<none>' | awk '{print $3}' | xargs -r docker rmi -f
+```
+
+```bash
 # 把容器 container 的内容提交成 author/image:tag 镜像
 docker commit container author/image:tag
 
