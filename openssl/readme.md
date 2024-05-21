@@ -32,6 +32,9 @@ openssl pkcs8 -topk8 -inform PEM -outform DER -in myssl.pem -out myssl.der -nocr
 # 把 pkcs8 转成 文本形式
 # 输出物 -----BEGIN PRIVATE KEY----- 
 openssl pkcs8 -topk8 -inform DER -outform PEM -in myssl.der -out myssl.key --nocrypt
+
+# 私钥 导出 RSA 公钥
+openssl rsa -in myssl.key -pubout -out myssl.pub 
 ```
 
 ## OpenSSH
