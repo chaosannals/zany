@@ -1,0 +1,103 @@
+<mxfile host="app.diagrams.net" modified="2024-07-13T06:38:30.321Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 Edg/126.0.0.0" etag="GmgwKRHJ55hyJ-x5C3bx" version="24.6.5" type="device">
+  <diagram name="第 1 页" id="O6Dw7toHRlwf70pb2NwU">
+    <mxGraphModel dx="1173" dy="751" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1920" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="JcjUvvv5rcbtcutKEqJC-1" value="组织&lt;div&gt;（组件树）&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JcjUvvv5rcbtcutKEqJC-10" value="component" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="720" y="200" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JcjUvvv5rcbtcutKEqJC-12" value="确定组件层级归属" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="720" y="230" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JcjUvvv5rcbtcutKEqJC-16" value="数据&lt;div&gt;（模型）&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JcjUvvv5rcbtcutKEqJC-17" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="JcjUvvv5rcbtcutKEqJC-16" target="JcjUvvv5rcbtcutKEqJC-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="320" y="390" as="sourcePoint" />
+            <mxPoint x="370" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JcjUvvv5rcbtcutKEqJC-18" value="操作&lt;div&gt;（事件）&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="60" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JcjUvvv5rcbtcutKEqJC-19" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="JcjUvvv5rcbtcutKEqJC-18" target="JcjUvvv5rcbtcutKEqJC-16">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="370" y="140" as="sourcePoint" />
+            <mxPoint x="420" y="90" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JcjUvvv5rcbtcutKEqJC-20" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="JcjUvvv5rcbtcutKEqJC-1" target="JcjUvvv5rcbtcutKEqJC-18">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="920" y="150" as="sourcePoint" />
+            <mxPoint x="970" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JcjUvvv5rcbtcutKEqJC-21" value="硬件" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="760" y="60" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JcjUvvv5rcbtcutKEqJC-22" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="JcjUvvv5rcbtcutKEqJC-21" target="JcjUvvv5rcbtcutKEqJC-18">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="940" y="200" as="sourcePoint" />
+            <mxPoint x="990" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JcjUvvv5rcbtcutKEqJC-24" value="布局随组件树深度遍历，自顶向下" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="455" y="320" width="330" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="JcjUvvv5rcbtcutKEqJC-2" value="布局&lt;div&gt;（约束器&lt;span style=&quot;background-color: initial;&quot;&gt;）&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="JcjUvvv5rcbtcutKEqJC-24">
+          <mxGeometry x="25" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JcjUvvv5rcbtcutKEqJC-3" value="放置&lt;div&gt;（放置器）&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="JcjUvvv5rcbtcutKEqJC-24">
+          <mxGeometry x="25" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JcjUvvv5rcbtcutKEqJC-6" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="JcjUvvv5rcbtcutKEqJC-24" source="JcjUvvv5rcbtcutKEqJC-2" target="JcjUvvv5rcbtcutKEqJC-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-140" y="200" as="sourcePoint" />
+            <mxPoint x="-90" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JcjUvvv5rcbtcutKEqJC-8" value="place" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="JcjUvvv5rcbtcutKEqJC-24">
+          <mxGeometry x="185" y="200" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JcjUvvv5rcbtcutKEqJC-9" value="layout" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelPosition=center;verticalLabelPosition=middle;" vertex="1" parent="JcjUvvv5rcbtcutKEqJC-24">
+          <mxGeometry x="185" y="40" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JcjUvvv5rcbtcutKEqJC-13" value="确定组件大小，占比。" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="JcjUvvv5rcbtcutKEqJC-24">
+          <mxGeometry x="185" y="80" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JcjUvvv5rcbtcutKEqJC-14" value="确定组件位置，可见性。" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="JcjUvvv5rcbtcutKEqJC-24">
+          <mxGeometry x="185" y="240" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JcjUvvv5rcbtcutKEqJC-25" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="JcjUvvv5rcbtcutKEqJC-1" target="JcjUvvv5rcbtcutKEqJC-24">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="220" y="440" as="sourcePoint" />
+            <mxPoint x="270" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JcjUvvv5rcbtcutKEqJC-27" value="渲染随布局结果列表，深度递减逐个渲染" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="452.5" y="680" width="335" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="JcjUvvv5rcbtcutKEqJC-4" value="绘制&lt;div&gt;（渲染器）&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="JcjUvvv5rcbtcutKEqJC-27">
+          <mxGeometry x="27.5" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JcjUvvv5rcbtcutKEqJC-11" value="render" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="JcjUvvv5rcbtcutKEqJC-27">
+          <mxGeometry x="187.5" y="80" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JcjUvvv5rcbtcutKEqJC-15" value="绘制组件内容，样式" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="JcjUvvv5rcbtcutKEqJC-27">
+          <mxGeometry x="187.5" y="120" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JcjUvvv5rcbtcutKEqJC-28" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="JcjUvvv5rcbtcutKEqJC-24" target="JcjUvvv5rcbtcutKEqJC-27">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="960" y="690" as="sourcePoint" />
+            <mxPoint x="1010" y="640" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
