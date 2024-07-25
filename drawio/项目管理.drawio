@@ -1,0 +1,34 @@
+<mxfile host="app.diagrams.net" modified="2024-07-24T02:57:43.604Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 Edg/126.0.0.0" etag="eZPCH0pikVw0oifQJMnV" version="24.6.5" type="device">
+  <diagram name="第 1 页" id="7Q4l2WNhtEan8ObgwJ8g">
+    <mxGraphModel dx="1173" dy="751" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1920" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="5BgKZ8bl_x1EIv62_NN0-3" value="操作" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="200" width="200" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="5BgKZ8bl_x1EIv62_NN0-1" value="更新项目" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="5BgKZ8bl_x1EIv62_NN0-3">
+          <mxGeometry x="40" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5BgKZ8bl_x1EIv62_NN0-2" value="修改配置" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="5BgKZ8bl_x1EIv62_NN0-3">
+          <mxGeometry x="40" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5BgKZ8bl_x1EIv62_NN0-4" value="项目列表" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5BgKZ8bl_x1EIv62_NN0-6" value="进度" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="760" y="200" width="210" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="5BgKZ8bl_x1EIv62_NN0-5" value="进度" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="5BgKZ8bl_x1EIv62_NN0-6">
+          <mxGeometry x="40" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5BgKZ8bl_x1EIv62_NN0-7" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="5BgKZ8bl_x1EIv62_NN0-6">
+          <mxGeometry x="40" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5BgKZ8bl_x1EIv62_NN0-8" value="需求列表" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

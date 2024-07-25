@@ -1,0 +1,102 @@
+<mxfile host="app.diagrams.net" modified="2024-07-24T05:49:20.917Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 Edg/126.0.0.0" version="24.7.2" etag="s8SZU1r7JPKW3IOk4Ahr" type="device">
+  <diagram id="CneLnDbz1PBB4Xr9RBK_" name="第 1 页">
+    <mxGraphModel dx="2782" dy="1252" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="moESoLMlw75EXLViNpKk-1" value="提出需求" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="120" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="moESoLMlw75EXLViNpKk-5" value="开发" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-40" y="360" width="440" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="moESoLMlw75EXLViNpKk-4" value="前端" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="moESoLMlw75EXLViNpKk-5">
+          <mxGeometry x="40" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="moESoLMlw75EXLViNpKk-7" value="后端（可选）" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="moESoLMlw75EXLViNpKk-5">
+          <mxGeometry x="280" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="moESoLMlw75EXLViNpKk-9" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="moESoLMlw75EXLViNpKk-5" source="moESoLMlw75EXLViNpKk-4" target="moESoLMlw75EXLViNpKk-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="190" y="210" as="sourcePoint" />
+            <mxPoint x="240" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="moESoLMlw75EXLViNpKk-10" value="对接" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="moESoLMlw75EXLViNpKk-9">
+          <mxGeometry x="0.1091" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="moESoLMlw75EXLViNpKk-8" value="测试（可选）" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="640" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="moESoLMlw75EXLViNpKk-11" value="交付" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="120" y="760" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="moESoLMlw75EXLViNpKk-12" value="产品设计" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-20" y="160" width="400" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="moESoLMlw75EXLViNpKk-2" value="原型（可选）" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="moESoLMlw75EXLViNpKk-12">
+          <mxGeometry x="40" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="moESoLMlw75EXLViNpKk-3" value="UI 设计（可选）" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="moESoLMlw75EXLViNpKk-12">
+          <mxGeometry x="240" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="moESoLMlw75EXLViNpKk-13" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;dashed=1;" edge="1" parent="moESoLMlw75EXLViNpKk-12" source="moESoLMlw75EXLViNpKk-2" target="moESoLMlw75EXLViNpKk-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="160" y="190" as="sourcePoint" />
+            <mxPoint x="210" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="moESoLMlw75EXLViNpKk-15" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="moESoLMlw75EXLViNpKk-1" target="moESoLMlw75EXLViNpKk-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint y="100" as="sourcePoint" />
+            <mxPoint x="50" y="50" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="moESoLMlw75EXLViNpKk-16" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="moESoLMlw75EXLViNpKk-12" target="moESoLMlw75EXLViNpKk-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-120" y="330" as="sourcePoint" />
+            <mxPoint x="-70" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="moESoLMlw75EXLViNpKk-17" value="2.UI 设计经常由于节约成本被跳过，由程序员自行设计。" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="400" y="200" width="326" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="moESoLMlw75EXLViNpKk-18" value="1.原型一般不会省略，但是某些情况由口头需求，由程序员自行琢磨。" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="400" y="160" width="390" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="moESoLMlw75EXLViNpKk-19" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="moESoLMlw75EXLViNpKk-5" target="moESoLMlw75EXLViNpKk-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-40" y="620" as="sourcePoint" />
+            <mxPoint x="10" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="moESoLMlw75EXLViNpKk-20" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="moESoLMlw75EXLViNpKk-8" target="moESoLMlw75EXLViNpKk-11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-40" y="680" as="sourcePoint" />
+            <mxPoint x="10" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="moESoLMlw75EXLViNpKk-21" value="" style="curved=1;endArrow=classic;html=1;rounded=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;dashed=1;" edge="1" parent="1" source="moESoLMlw75EXLViNpKk-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-10" y="590" as="sourcePoint" />
+            <mxPoint x="40" y="480" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="60" y="660" />
+              <mxPoint x="40" y="600" />
+              <mxPoint x="40" y="550" />
+              <mxPoint x="40" y="540" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="moESoLMlw75EXLViNpKk-22" value="1. 部分工具类应用不涉及后端开发。" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="440" y="360" width="320" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="moESoLMlw75EXLViNpKk-23" value="1. 部分功能并不经过测试，仅由程序员调试通过。" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="280" y="640" width="280" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
