@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-07-24T05:49:20.917Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 Edg/126.0.0.0" version="24.7.2" etag="s8SZU1r7JPKW3IOk4Ahr" type="device">
+<mxfile host="app.diagrams.net" modified="2024-07-26T07:44:32.788Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 Edg/126.0.0.0" version="24.7.2" etag="am8WNahnAgpgACbU4QuP" type="device">
   <diagram id="CneLnDbz1PBB4Xr9RBK_" name="第 1 页">
-    <mxGraphModel dx="2782" dy="1252" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1636" dy="518" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -16,7 +16,7 @@
         <mxCell id="moESoLMlw75EXLViNpKk-7" value="后端（可选）" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="moESoLMlw75EXLViNpKk-5">
           <mxGeometry x="280" y="40" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="moESoLMlw75EXLViNpKk-9" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="moESoLMlw75EXLViNpKk-5" source="moESoLMlw75EXLViNpKk-4" target="moESoLMlw75EXLViNpKk-7">
+        <mxCell id="moESoLMlw75EXLViNpKk-9" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;dashed=1;" edge="1" parent="moESoLMlw75EXLViNpKk-5" source="moESoLMlw75EXLViNpKk-4" target="moESoLMlw75EXLViNpKk-7">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="190" y="210" as="sourcePoint" />
             <mxPoint x="240" y="160" as="targetPoint" />
@@ -78,16 +78,18 @@
             <mxPoint x="10" y="630" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="moESoLMlw75EXLViNpKk-21" value="" style="curved=1;endArrow=classic;html=1;rounded=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;dashed=1;" edge="1" parent="1" source="moESoLMlw75EXLViNpKk-8">
+        <mxCell id="moESoLMlw75EXLViNpKk-21" value="" style="curved=1;endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;dashed=1;" edge="1" parent="1" source="moESoLMlw75EXLViNpKk-8">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="-10" y="590" as="sourcePoint" />
+            <mxPoint x="120" y="680" as="sourcePoint" />
             <mxPoint x="40" y="480" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="60" y="660" />
-              <mxPoint x="40" y="600" />
-              <mxPoint x="40" y="550" />
-              <mxPoint x="40" y="540" />
+              <mxPoint x="30" y="650" />
             </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="moESoLMlw75EXLViNpKk-24" value="漏洞反馈" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="moESoLMlw75EXLViNpKk-21">
+          <mxGeometry x="-0.0274" y="3" relative="1" as="geometry">
+            <mxPoint x="21" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="moESoLMlw75EXLViNpKk-22" value="1. 部分工具类应用不涉及后端开发。" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
@@ -95,6 +97,62 @@
         </mxCell>
         <mxCell id="moESoLMlw75EXLViNpKk-23" value="1. 部分功能并不经过测试，仅由程序员调试通过。" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="280" y="640" width="280" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="moESoLMlw75EXLViNpKk-25" value="" style="curved=1;endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;dashed=1;" edge="1" parent="1" source="moESoLMlw75EXLViNpKk-11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-60" y="780" as="sourcePoint" />
+            <mxPoint y="480" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-20" y="770" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="moESoLMlw75EXLViNpKk-26" value="反馈" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="moESoLMlw75EXLViNpKk-25">
+          <mxGeometry x="-0.0212" y="-30" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="moESoLMlw75EXLViNpKk-27" value="" style="curved=1;endArrow=classic;html=1;rounded=0;entryX=0;entryY=1;entryDx=0;entryDy=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;dashed=1;" edge="1" parent="1" source="moESoLMlw75EXLViNpKk-5" target="moESoLMlw75EXLViNpKk-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="20" y="340" as="sourcePoint" />
+            <mxPoint x="-80" y="310" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-20" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="moESoLMlw75EXLViNpKk-28" value="部分交付" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="moESoLMlw75EXLViNpKk-27">
+          <mxGeometry x="0.0189" y="-16" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="moESoLMlw75EXLViNpKk-29" value="" style="curved=1;endArrow=classic;html=1;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;dashed=1;" edge="1" parent="1" source="moESoLMlw75EXLViNpKk-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-10" y="280" as="sourcePoint" />
+            <mxPoint x="70" y="360" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="90" y="310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="moESoLMlw75EXLViNpKk-30" value="修改反馈" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="moESoLMlw75EXLViNpKk-29">
+          <mxGeometry x="0.597" y="-18" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="moESoLMlw75EXLViNpKk-31" value="" style="curved=1;endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" target="moESoLMlw75EXLViNpKk-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="40" y="480" as="sourcePoint" />
+            <mxPoint x="120" y="570" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="100" y="540" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="moESoLMlw75EXLViNpKk-32" value="修复重测" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="moESoLMlw75EXLViNpKk-31">
+          <mxGeometry x="-0.0461" y="-12" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
